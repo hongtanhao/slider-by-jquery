@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery轮播图插件</title>
+    <link rel="stylesheet" href="./css/slider.css">
+</head>
+ 
+<body>
+    <div id="slider"  style="margin:50px auto"></div>
+ 
+    <script src="./lib/jquery.js"></script>
+    <script src="./js/jquery.slider.js"></script>
+    <script src="./js/slider.js"></script>
+    <script>
+        var images = new Array(15); // 轮播图片容器
+        var path = './images/';
+        var imgType = '.jpg';
+        for (var i = 0; i < images.length; i++) {
+            images[i] = path + (i + 1) + imgType;
+        }
+        $('#slider').sliderImg(images);
+    </script>
+</body>
+ 
+</html>
